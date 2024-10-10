@@ -33,10 +33,10 @@ function App()
     console.log(advice);
   }
 
-  // useEffect(() =>
-  // {
-  //   fetchData();
-  // }, [])
+  useEffect(() =>
+  {
+    fetchData();
+  }, [])
 
   return (
     <>
