@@ -42,8 +42,8 @@ function App()
     <>
       <div className="container">
         <div className="card">
-          <p className="card-heading">Advice #{advice.length === 0 ? advice.id : "15"}</p>
-          <h3 className="card-text">{advice.length === 0 ? `"${advice.advice}"` : "If it ain't broke don't fix it."}</h3>
+          <p className="card-heading">Advice #{advice.length === 0 ? "15" : advice.id}</p>
+          <h3 className="card-text">{advice.length === 0 ? "If it ain't broke don't fix it." : `"${advice.advice}"`}</h3>
           <MediaQuery minWidth={577}>
             <img src="/images/pattern-divider-desktop.svg" alt="card-divider" className="card-divider" />
           </MediaQuery>
