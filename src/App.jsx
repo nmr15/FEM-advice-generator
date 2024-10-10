@@ -1,18 +1,19 @@
-import axios from 'axios'
 import { useState, useEffect } from 'react'
 import './App.scss'
 import MediaQuery from 'react-responsive'
-
+import axios from 'axios'
 
 function App() 
 {
   const [advice, setAdvice] = useState([])
 
+  const url = 'https://api.adviceslip.com/advice';
+
   let fetchData = async() =>
   {
     try
     {
-      let resp = await axios.get('https://api.adviceslip.com/advice');
+      let resp = await axios.get(url);
       let data = await resp.data.slip;
       
       console.log(data);
