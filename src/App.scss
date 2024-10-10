@@ -30,7 +30,7 @@ body
   flex-direction: column;
   align-items: center;
   // position: absolute;
-  width: fit-content;
+  width: 34rem;
   // margin-top: 10rem;
   border-radius: 10px 10px 10px 10px;
   -webkit-border-radius: 10px 10px 10px 10px;
@@ -54,8 +54,9 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85%;
+    width: fit-content;
     padding: 0 1.875rem 1.875rem 1.875rem;
+    text-align: center;
     font-size: 28px;
     color: hsl(193, 38%, 86%);
   }
@@ -75,7 +76,39 @@ body
     width: 3.125rem;
     height: 3.125rem;
     border-radius: 50%;
-    // z-index: 1;
+    cursor: pointer;
     background-color: hsl(150, 100%, 66%);
+
+    &:hover, &:active
+    {
+      box-shadow: 0rem 0rem 1rem hsl(150, 100%, 66%);
+    }
+  }
+}
+
+.attribution
+{
+  padding: 5rem 0;
+  color: #fff;
+  text-align: center;
+
+  & a
+  {
+    color: #fff;
+  }
+}
+
+@media (max-width: 576px)
+{
+  .card
+  {
+    width: 22rem;
+    margin: 0 auto;
+  }
+
+  .attribution
+  {
+    margin: 0 0.313rem 0 0.313rem;
+    font-size: 13px;
   }
 }

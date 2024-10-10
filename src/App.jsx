@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.scss'
+import MediaQuery from 'react-responsive'
 import axios from "axios"
 
 function App() 
@@ -39,11 +40,16 @@ function App()
     <>
       <div className="container">
         <div className="card">
-          <p className="card-heading">Advice #{advice.id}</p>
-          <h3 className="card-text">{`"${advice.advice}"`}</h3>
-          <img src="/images/pattern-divider-desktop.svg" alt="" className="card-divider" />
+          <p className="card-heading">Advice #{advice ? advice.id : "15"}</p>
+          <h3 className="card-text">{advice ? `"${advice.advice}"` : "If it ain't broke don't fix it."}</h3>
+          <MediaQuery minWidth={577}>
+            <img src="/images/pattern-divider-desktop.svg" alt="card-divider" className="card-divider" />
+          </MediaQuery>
+          <MediaQuery maxWidth={576}>
+            <img src="/images/pattern-divider-mobile.svg" alt="card-divider" className="card-divider" />
+          </MediaQuery>
           <div className="card-btn" onClick={handleClick}>
-            <img src="/images/icon-dice.svg" alt="" />
+            <img src="/images/icon-dice.svg" alt="card-btn" />
           </div>
         </div>
         {/* <h2>{advice}</h2> */}
@@ -51,7 +57,7 @@ function App()
       </div>
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/nmr15">Nathaniel Ravelo</a>.
       </div>
     </>
   )
