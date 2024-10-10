@@ -33,17 +33,17 @@ function App()
     console.log(advice);
   }
 
-  useEffect(() =>
-  {
-    fetchData();
-  }, [])
+  // useEffect(() =>
+  // {
+  //   fetchData();
+  // }, [])
 
   return (
     <>
       <div className="container">
         <div className="card">
-          <p className="card-heading">Advice #{advice ? advice.id : "15"}</p>
-          <h3 className="card-text">{advice ? `"${advice.advice}"` : "If it ain't broke don't fix it."}</h3>
+          <p className="card-heading">Advice #{advice.length === 0 ? advice.id : "15"}</p>
+          <h3 className="card-text">{advice.length === 0 ? `"${advice.advice}"` : "If it ain't broke don't fix it."}</h3>
           <MediaQuery minWidth={577}>
             <img src="/images/pattern-divider-desktop.svg" alt="card-divider" className="card-divider" />
           </MediaQuery>
