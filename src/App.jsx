@@ -1,7 +1,8 @@
+import axios from 'axios'
 import { useState, useEffect } from 'react'
 import './App.scss'
 import MediaQuery from 'react-responsive'
-import axios from 'axios'
+
 
 function App() 
 {
